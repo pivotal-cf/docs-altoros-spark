@@ -3,14 +3,14 @@ title: Using Altoros Spark for PCF
 owner: Partners
 ---
 
-This topic describes how developers create and bind instances of the Altoros Spark for PCF.
+This topic describes how developers create and bind instances of the Altoros Spark for Pivotal Cloud Foundry (PCF).
 
 After deploying the Apache Spark for PCF tile, the Apache Spark service appears in the Marketplace.
 Developers can use either the Cloud Foundry Command Line Interface (cf CLI) or
-Apps Manager to create a service instance and bind it to applications.
+Apps Manager to create a service instance and bind it to apps.
 Binding instances is the process of creating unique credentials for each app to access the database.
 
-##<a id='cf-cli'></a> Create and Bind a Service Instance using the CF CLI
+##<a id='cf-cli'></a> Create and Bind a Service Instance Using the CF CLI
 
 To create and bind an instance of the Altoros Spark for PCF using the CF CLI, perform the following steps:
 
@@ -66,7 +66,7 @@ To create and bind an instance of the Altoros Spark for PCF using the CF CLI, pe
 	Updated: 2017-09-15T12:45:19Z
 	</pre>
 
-1. Bind the instance to an application.
+1. Bind the instance to an app.
   <pre class="terminal">
   $ cf bind-service YOUR-APP YOUR-SERVICE-INSTANCE
   Binding service YOUR-SERVICE-INSTANCE to app YOUR-APP in org system / space administrators as user@example.com...
@@ -78,7 +78,7 @@ To create and bind an instance of the Altoros Spark for PCF using the CF CLI, pe
   $ cf restage YOUR-APP
   </pre>
 
-##<a id='apps-man'></a> Create and Bind a Service Instance using Apps Manager
+##<a id='apps-man'></a> Create and Bind a Service Instance Using Apps Manager
 
 To create and bind an instance of the Altoros Spark for PCF using Apps Manager, perform the following steps:
 
@@ -87,8 +87,8 @@ To create and bind an instance of the Altoros Spark for PCF using Apps Manager, 
 1. Click **Apache Spark**.
 1. Select the `standalone` service plan.
 1. Enter an **Instance Name** and select a space under **Add to Space**.
-   To bind the service instance to an application, select an app under **Bind to App**.
+   To bind the service instance to an app, select an app under **Bind to App**.
 1. Click **Add**.
-  You can also bind an application to a service instance by navigating to the app page,
+  You can also bind an app to a service instance by navigating to the app page,
   clicking **Services**, then clicking **Bind a Service**.
 1. Select a service instance to bind to the app and click **Bind**.
